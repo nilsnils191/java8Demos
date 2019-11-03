@@ -1,0 +1,49 @@
+having 5 methods  -> 1 abstract , 3 default and 1 static
+
+@FunctionalInterface
+public interface Predicate<T> {
+
+
+    /**
+     * Evaluates this predicate on the given argument.
+     -----------------------------------------------------------------------------------------
+    boolean test(T t);
+    -----------------------------------------------------------------------------------------
+    
+    
+    /**
+     * Returns a composed predicate that represents a short-circuiting logical
+     * AND of this predicate and another.  When evaluating the composed
+     * predicate, if this predicate is {@code false}, then the {@code other}
+     * predicate is not evaluated.
+     
+     -----------------------------------------------------------------------------------------
+    default Predicate<T> and(Predicate<? super T> other) {
+    -----------------------------------------------------------------------------------------
+
+    /**
+     * Returns a predicate that represents the logical negation of this
+     * predicate.
+     */
+     
+     -----------------------------------------------------------------------------------------
+    default Predicate<T> negate() {
+    -----------------------------------------------------------------------------------------
+
+    /**
+     * Returns a composed predicate that represents a short-circuiting logical
+     * OR of this predicate and another.  When evaluating the composed
+     * predicate, if this predicate is {@code true}, then the {@code other}
+     * predicate is not evaluated.
+     
+     -----------------------------------------------------------------------------------------
+    default Predicate<T> or(Predicate<? super T> other) {
+    -----------------------------------------------------------------------------------------
+
+     * Returns a predicate that tests if two arguments are equal according
+     * to {@link Objects#equals(Object, Object)}.
+     *
+     
+     -----------------------------------------------------------------------------------------
+    static <T> Predicate<T> isEqual(Object targetRef) {
+    -----------------------------------------------------------------------------------------
